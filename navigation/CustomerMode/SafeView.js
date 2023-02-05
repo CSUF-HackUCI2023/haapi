@@ -2,9 +2,9 @@ import * as React from 'react';
 import { View, StyleSheet } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
-import CustomerContainer from './navigation/CustomerMode/CustomerContainer';
+import CustomerContainer from './CustomerContainer';
 
-export default function UserView(props) {
+export default function SafeView(props) {
     const insets = useSafeAreaInsets();
     return (
         <View style={{
