@@ -29,4 +29,8 @@ export const getNearbyAapiBusinesses = async () => {
     }
     businesses[NAME].push(INFORMATION)
   }
+  console.log(businesses)
 }
+
+getNearbyAapiBusinesses()
+

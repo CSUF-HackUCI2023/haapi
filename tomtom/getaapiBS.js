@@ -28,4 +28,7 @@ export const getAapiBusinesses = async () => {
       }
       businesses[NAME].push(INFORMATION)
   }
+  console.log(businesses)
 }
+
+getAapiBusinesses()
