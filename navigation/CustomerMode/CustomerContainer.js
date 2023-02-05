@@ -15,7 +15,7 @@ const Tab = createBottomTabNavigator();
 function CustomerContainer()
 {
     return (
-        <NavigationContainer>
+        <NavigationContainer independent={true}>
             <Tab.Navigator
                 screenOptions={({route}) => ({
                     tabBarIcon: ({ focused, color, size }) => {
