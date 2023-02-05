@@ -20,21 +20,21 @@ function RegisterScreen() {
                 <Text>Business</Text>
             </View>
             <View style={styles.singleInputContainer}>
-                <TextInput style={styles.textInput} placeholder='Enter shop name here' placeholderTextColor="#000" />
+                <TextInput style={styles.textInput} placeholder='Enter shop name' placeholderTextColor="#000" />
             </View>
 
             <View style={styles.inputTitle}>
-                <Text>Address</Text>
+                <Text>E-mail</Text>
             </View>
             <View style={styles.singleInputContainer}>
-                <TextInput style={styles.textInput} placeholder='Enter shop address here' placeholderTextColor="#000"/>
+                <TextInput style={styles.textInput} placeholder='Enter e-mail' placeholderTextColor="#000"/>
             </View>
 
             <View style={styles.inputTitle}>
-                <Text>Description</Text>
+                <Text>Password</Text>
             </View>
             <View style={styles.singleInputContainer}>
-                <TextInput style={styles.textInput} placeholder='Enter shop description here' placeholderTextColor="#000"/>
+                <TextInput style={styles.textInput} placeholder='Enter new password' placeholderTextColor="#000"/>
             </View>
             </View>
 
