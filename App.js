@@ -1,10 +1,10 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 import SafeView from './navigation/CustomerMode/SafeView';
+import LoginScreen from './navigation/BusinessMode/LoginScreen'
 import ModeScreen from './ModeScreen';
 
 const Stack = createNativeStackNavigator();
@@ -16,7 +16,7 @@ export default function App() {
         <Stack.Navigator initalRouteName='Mode'>
           <Stack.Screen name='Mode' component={ModeScreen} options={{headerShown: false}}/>
           <Stack.Screen name='Customer' component={SafeView} options={{headerShown: false}}/>
-          <Stack.Screen name='Business' component={ModeScreen} options={{headerShown: false}}/>
+          <Stack.Screen name='Business' component={LoginScreen} options={{headerShown: false}}/>
         </Stack.Navigator>
       </NavigationContainer>
       <StatusBar style="auto" />
