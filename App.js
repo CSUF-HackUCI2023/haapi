@@ -1,13 +1,19 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, View } from 'react-native';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+
 import CustomerContainer from './navigation/CustomerMode/CustomerContainer';
+import UserView from './UserView';
+
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <CustomerContainer/>
-      <StatusBar style="auto" />
-    </View>
+    <SafeAreaProvider>
+        <View style={styles.container}>
+          <UserView/>
+          <StatusBar style="auto" />
+        </View>
+      </SafeAreaProvider>
   );
 }
 
