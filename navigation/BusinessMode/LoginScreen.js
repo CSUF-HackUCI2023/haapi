@@ -5,9 +5,6 @@ import {NavigationContainer} from '@react-navigation/native';
 function LoginScreen({navigation}) {
     return (
         <View style={styles.appContainer}>
-            <View style={styles.backButton}>
-                <Button title='Back' onPress={() => navigation.goBack()}/>
-            </View>
             <View style={{flex: 1.3}} />
 
             {/*Main Title*/}
@@ -35,6 +32,10 @@ function LoginScreen({navigation}) {
             </View>
 
             {/*Buttons*/}
+            <View style={styles.backButton}>
+                <Button title='Submit' onPress={() => navigation.navigate("Announcement")}/>
+            </View>
+            <View style={{flex: 0.8}} />
             <View style={styles.button}>
             <View style={styles.singleButton}>
                 <Button title= 'Register' onPress={() => navigation.navigate("Register")} />
@@ -88,11 +89,11 @@ const styles = StyleSheet.create({
     setFontSizeOne: {
         fontSize: 20
     },
-    backButton: {
-        alignSelf: 'flex-start',
-        marginLeft: -20,
-        marginTop: 10
-    }
+    // backButton: {
+    //     alignSelf: 'flex-start',
+    //     marginLeft: -20,
+    //     marginTop: 10
+    // }
 });
 
 export default LoginScreen;

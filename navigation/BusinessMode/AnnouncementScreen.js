@@ -2,56 +2,40 @@ import * as React from 'react'
 import { View, Text, StyleSheet, Button, TextInput } from 'react-native'
 import {NavigationContainer} from '@react-navigation/native';
 
-function RegisterScreen({navigation}) {
+function AnnouncementScreen({navigation}) {
     return (
         <View style={styles.appContainer}>
-            <View style={{flex: 1.2}} />
+            <View style={{flex: 1.8}} />
 
             {/*Main Title*/}
             <View style={styles.titleContainer}>
-                <Text style={styles.setFontSizeOne}>Register Your Business</Text>
+                <Text style={styles.setFontSizeOne}>Make an Announcement!</Text>
             </View>
 
-            <View style={{flex: 0.5}} />
+            <View style={{flex: 1}} />
         
             {/*Inputs*/}
             <View style={styles.wholeInputContainer}>
             <View style={styles.inputTitle}>
-                <Text>Business</Text>
+                <Text>Share your business news here!</Text>
             </View>
             <View style={styles.singleInputContainer}>
-                <TextInput style={styles.textInput} placeholder='Enter shop name' placeholderTextColor="#000" />
+                <TextInput style={styles.textInput} placeholder='Events, deals, etc.' placeholderTextColor="#000" />
             </View>
 
             <View style={styles.inputTitle}>
-                <Text>E-mail</Text>
+                <Text>Upload images</Text>
             </View>
             <View style={styles.singleInputContainer}>
-                <TextInput style={styles.textInput} placeholder='Enter e-mail' placeholderTextColor="#000"/>
-            </View>
-
-            <View style={styles.inputTitle}>
-                <Text>Password</Text>
-            </View>
-            <View style={styles.singleInputContainer}>
-                <TextInput style={styles.textInput} placeholder='Enter new password' placeholderTextColor="#000"/>
+                <TextInput style={styles.textInput} placeholder='Upload images here' placeholderTextColor="#000"/>
             </View>
             </View>
 
             {/*Buttons*/}
-            <View style={styles.backButton}>
-                <Button title='Submit' onPress={() => navigation.navigate("Announcement")}/>
+            <View>
+                <Button title='Post' onPress={() => navigation.navigate("News")}/>
             </View>
-            <View style={{flex: 0.5}} />
-            <View style={styles.button}>
-            <View style={styles.singleButton}>
-                <Button title= 'Register' onPress={() => navigation.navigate("Register")} />
-            </View>
-            <View style={styles.singleButton}>
-                <Button title= 'Login' onPress={() => navigation.navigate("Login")} />
-            </View>
-            </View>
-            <View style={{flex: 1.4}} />
+            <View style={{flex: 3}} />
         </View>
     );
 }
@@ -103,4 +87,4 @@ const styles = StyleSheet.create({
     // }
 });
 
-export default RegisterScreen;
+export default AnnouncementScreen;
