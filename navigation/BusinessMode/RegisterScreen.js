@@ -2,9 +2,12 @@ import * as React from 'react'
 import { View, Text, StyleSheet, Button, TextInput } from 'react-native'
 import {NavigationContainer} from '@react-navigation/native';
 
-function RegisterScreen() {
+function RegisterScreen({navigation}) {
     return (
         <View style={styles.appContainer}>
+            <View style={styles.backButton}>
+                <Button title='Back' onPress={() => navigation.goBack()} />
+            </View>
             <View style={{flex: 1}} />
 
             {/*Main Title*/}
@@ -41,10 +44,10 @@ function RegisterScreen() {
             {/*Buttons*/}
             <View style={styles.button}>
             <View style={styles.singleButton}>
-                <Button title= 'Register' />
+                <Button title= 'Register' onPress={() => navigation.navigate("Register")} />
             </View>
             <View style={styles.singleButton}>
-                <Button title= 'Login' />
+                <Button title= 'Login' onPress={() => navigation.navigate("Login")} />
             </View>
             </View>
             <View style={{flex: 1.4}} />
@@ -91,6 +94,11 @@ const styles = StyleSheet.create({
     },
     setFontSizeOne: {
         fontSize: 20
+    },
+    backButton: {
+        alignSelf: 'flex-start',
+        marginLeft: -20,
+        marginTop: 10
     }
 });
 

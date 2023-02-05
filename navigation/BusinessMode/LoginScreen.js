@@ -2,10 +2,13 @@ import * as React from 'react'
 import { View, Text, StyleSheet, Button, TextInput } from 'react-native'
 import {NavigationContainer} from '@react-navigation/native';
 
-function LoginScreen() {
+function LoginScreen({navigation}) {
     return (
         <View style={styles.appContainer}>
-            <View style={{flex: 1}} />
+            <View style={styles.backButton}>
+                <Button title='Back' onPress={() => navigation.goBack()}/>
+            </View>
+            <View style={{flex: 1.3}} />
 
             {/*Main Title*/}
             <View style={styles.titleContainer}>
@@ -34,13 +37,13 @@ function LoginScreen() {
             {/*Buttons*/}
             <View style={styles.button}>
             <View style={styles.singleButton}>
-                <Button title= 'Register' />
+                <Button title= 'Register' onPress={() => navigation.navigate("Register")} />
             </View>
             <View style={styles.singleButton}>
-                <Button title= 'Login' />
+                <Button title= 'Login' onPress={() => navigation.navigate("Login")}/>
             </View>
             </View>
-            <View style={{flex: 2.5}} />
+            <View style={{flex: 3}} />
         </View>
     );
 }
@@ -84,6 +87,11 @@ const styles = StyleSheet.create({
     },
     setFontSizeOne: {
         fontSize: 20
+    },
+    backButton: {
+        alignSelf: 'flex-start',
+        marginLeft: -20,
+        marginTop: 10
     }
 });
 
