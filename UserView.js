@@ -3,6 +3,7 @@ import { View, StyleSheet } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import CustomerContainer from './navigation/CustomerMode/CustomerContainer';
+import BusinessScreen from './BusinessMode/BusinessScreen';
 
 export default function UserView() {
     const insets = useSafeAreaInsets();
@@ -14,7 +15,7 @@ export default function UserView() {
             paddingLeft: insets.left,
             paddingRight: insets.right
         }}>
-            <CustomerContainer/>
+            <BusinessScreen/>
         </View>
     )
 }
