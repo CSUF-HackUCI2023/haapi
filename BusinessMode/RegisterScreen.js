@@ -1,8 +1,8 @@
 import * as React from 'react'
 import { View, Text, StyleSheet, Button, TextInput } from 'react-native'
-import { Dimensions } from 'react-native';
+import {NavigationContainer} from '@react-navigation/native';
 
-function BusinessScreen() {
+function RegisterScreen() {
     return (
         <View style={styles.appContainer}>
             <View style={{flex: 1}} />
@@ -94,4 +94,4 @@ const styles = StyleSheet.create({
     }
 });
 
-export default BusinessScreen;
+export default RegisterScreen;
